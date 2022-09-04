@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Arima+Madurai:wght@300&family=Averia+Serif+Libre:ital@1&family=Bangers&family=Cinzel:wght@500&family=Goudy+Bookletter+1911&family=Russo+One&family=Space+Grotesk&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: none;
+    font-family: 'Cinzel', serif;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+#preloader{
+  background: #000 url("loading.gif") no-repeat center center;
+  background-size: 12%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    animation: glowblue 1s ease-in-out infinite alternate;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    animation: showup 7s 1;
+    background-color: black;
+    z-index: 999;
+    
+}
+
+.navbar img{
+  animation: slideLeft 1s ease-in-out forwards;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    margin-right: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ece5e5;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 5rem;
+    animation: slideRight 1s ease-in-out forwards;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #aeb9c7;
+}
+
+.nav-link:hover{
+    color: #ffffff;
+    font-size: 1.8em;
+}
+
+.nav-logo {
+    height: 50px;
+    margin-left: 10px;
+}
+
+#thispage a{
+  border-bottom: 1px solid #aeb9c7;
+}
+
+.garchig{
+  margin-bottom: 50px;
+  animation-name: showup;
+    animation-duration: 9s;
+    animation-iteration-count: 1;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  font-size: 6vw;
+  font-family: 'Bangers', cursive;
+  text-transform: uppercase;
+  animation: glowpink 2s ease-in-out infinite alternate;
+  letter-spacing: 10px;
+  margin-top: 20px;
+}
+
+.imgBx:hover img{
+  opacity:0.5;
+  transition-duration: .5s;
+}
+
+.container{
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.box{
+  width: 30%;
+  margin-bottom: 50px;
+  animation: slideRight 1s ease-in-out forwards;
+}
+
+.imgBx img{
+  width: 100%;
+  border: 1px solid rgb(150, 141, 141);
+  transition: transform .2s;
+}
+
+.number p{
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 2em;
+}
+
+.scrollFade {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .scrollFade--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .scrollFade--visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .scrollFade--animate {
+    transition: opacity 2s ease-in-out;
+  }
+
+  .footer{
+    color: rgb(241, 237, 221);
+    margin: 50px 40px;
+    text-align: center;
+    font-family: 'Averia Serif Libre', cursive;
+    text-transform: uppercase;
+    animation: glowblue 2s ease-in-out infinite alternate;
+    font-size: 2em;
+  }
+
+  .imgBx:hover {
+    transform: scale(1.1);
+  }
+
+  #scrollToTopBtn {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 2em;
+    width: 1.4em;
+  }
+
+#tobottom{
+  position: absolute;
+  right: 9%;
+}
+
+@keyframes glowblue {
+    from {
+      text-shadow: 0 0 20px #2d9da9;
+    }
+    to {
+      text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    }
+  }
+
+  @keyframes glowred {
+    from {
+      text-shadow: 0 0 20px #fc2525;
+    }
+    to {
+      text-shadow: 0 0 30px #84f0fc, 0 0 10px #77fd65;
+    }
+  }
+
+  @keyframes glowpink {
+    from {
+      text-shadow: 0 0 20px #b83497;
+    }
+    to {
+      text-shadow: 0 0 30px #ce93dd, 0 0 10px #df72b5;
+    }
+  }
+
+  @keyframes showup {
+    0% {opacity:0;}
+    25% {opacity:1;}
+    100% {opacity:1;}
+}
+
+@keyframes slideLeft
+{
+	0%{
+		transform: translateX(-150px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slideRight
+{
+	0%
+	{
+		transform: translateX(150px);
+		opacity: 0;
+	}
+	100%
+	{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.89);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .box{
+      width: 45%;
+      height: auto;
+    }
+}
+
+@media only screen and (max-width: 360px){
+  .box{
+    width: 80%;
+    height: auto;
+  }
+}
